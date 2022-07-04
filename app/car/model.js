@@ -9,5 +9,5 @@ export default class CarModel extends Model {
   @attr('boolean') aircondition;
   @attr('string') transmission;
   @attr('string') fuel;
-  @attr('string') imgURL;
+  @attr('string') img;
 }

@@ -13,7 +13,7 @@ module.exports = function (defaults) {
       importBootstrapCSS: false,
     },
   });
-
+  app.import('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

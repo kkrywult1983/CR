@@ -1,3 +1,1 @@
-import adapter from '@ember-data-adapter';
-
-
+export { default } from 'ember-local-storage/adapters/local';

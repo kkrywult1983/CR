@@ -12,7 +12,7 @@ export default class ApplicationRoute extends Route {
       email: 'cutmaster12@interia.pl',
       photoURL:
         'https://i1.sndcdn.com/avatars-000279018289-rkoa3r-t500x500.jpg',
-      // birthday: '26-06-1983',
+      birthday: '26.06.1983',
       isAdmin: true,
     };
 
@@ -23,7 +23,7 @@ export default class ApplicationRoute extends Route {
       email: 'cutmast12@interia.eu',
       photoURL:
         'https://scontent.fktw1-1.fna.fbcdn.net/v/t31.18172-8/19388315_264635764012046_390930446730227518_o.jpg?stp=cp0_dst-jpg_e15_p320x320_q65&_nc_cat=102&ccb=1-7&_nc_sid=85a577&_nc_ohc=SKq2rs2olYEAX9Ug1nS&_nc_ht=scontent.fktw1-1.fna&oh=00_AT-YrLxda0JKFVreieNhsmbPdhto8TqFkbdU4CAOa0kJFw&oe=62EA39E2',
-      // birthday: '11-03-1996',
+      birthday: '11.03.1996',
     };
 
     const userModel1 = this.store.createRecord('user', user1);

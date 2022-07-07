@@ -5,6 +5,6 @@ export default class UserModel extends Model {
   @attr('string') password;
   @attr('string') email;
   @attr('string') photoURL;
-  @attr('date') birthday;
+  @attr('string') birthday;
   @attr('boolean', { defaultValue: false }) isAdmin;
 }

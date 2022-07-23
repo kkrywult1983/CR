@@ -5,8 +5,6 @@ export default class FleetRoute extends Route {
   @service store;
 
   model() {
-    const cars = this.store.findAll('car');
-
-    return cars;
+    return this.store.findAll('car');
   }
 }

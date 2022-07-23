@@ -33,11 +33,12 @@ export default class ApplicationRoute extends Route {
     await userModel2.save();
 
     const carModel_1 = {
+      id: 1,
       segment: 'SUV',
       brand: 'PEUGEOT',
       carModel: '5008 GT',
       doors: 5,
-      persons: 5,
+      seats: 5,
       aircondition: true,
       transmission: 'Manual',
       fuel: 'Diesel',
@@ -47,11 +48,12 @@ export default class ApplicationRoute extends Route {
     };
 
     const carModel_2 = {
+      id: 2,
       segment: 'SUV',
       brand: 'AUDI',
       carModel: 'Q5',
       doors: 5,
-      persons: 7,
+      seats: 7,
       aircondition: true,
       transmission: 'Automat',
       fuel: 'Benzyna',
@@ -59,11 +61,12 @@ export default class ApplicationRoute extends Route {
     };
 
     const carModel_3 = {
+      id: 3,
       segment: 'Klasa średnia',
       brand: 'KIA',
       carModel: 'OPTIMA',
       doors: 5,
-      persons: 5,
+      seats: 5,
       aircondition: true,
       transmission: 'Manual',
       fuel: 'Benzyna',
@@ -71,11 +74,12 @@ export default class ApplicationRoute extends Route {
     };
 
     const carModel_4 = {
+      id: 4,
       segment: 'Klasa średnia',
       brand: 'TOYOTA',
       carModel: 'CAMRY',
       doors: 5,
-      persons: 5,
+      seats: 5,
       aircondition: true,
       transmission: 'Automat',
       fuel: 'Diesel',
@@ -83,11 +87,12 @@ export default class ApplicationRoute extends Route {
     };
 
     const carModel_5 = {
+      id: 5,
       segment: 'Miejski',
       brand: 'AUDI',
       carModel: 'A3 SPORTBACK',
       doors: 5,
-      persons: 5,
+      seats: 5,
       aircondition: true,
       transmission: 'Automat',
       fuel: 'Gas',
@@ -95,11 +100,12 @@ export default class ApplicationRoute extends Route {
     };
 
     const carModel_6 = {
+      id: 6,
       segment: 'Miejski',
       brand: 'TOYOTA',
       carModel: 'YARIS',
       doors: 5,
-      persons: 4,
+      seats: 4,
       aircondition: true,
       transmission: 'Manual',
       fuel: 'Benzyna',

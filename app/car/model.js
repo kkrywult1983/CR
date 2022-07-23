@@ -5,7 +5,7 @@ export default class CarModel extends Model {
   @attr('string') brand;
   @attr('string') carModel;
   @attr('number') doors;
-  @attr('number') persons;
+  @attr('number') seats;
   @attr('boolean') aircondition;
   @attr('string') transmission;
   @attr('string') fuel;

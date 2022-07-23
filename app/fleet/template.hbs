@@ -1,4 +1,36 @@
 {{page-title 'Fleet'}}
 <h1>Flota samochodów</h1>
 
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th scope='col'>segment</th>
+      <th scope='col'>brand</th>
+      <th scope='col'>carModel</th>
+      <th scope='col'>doors</th>
+      <th scope='col'>Seats</th>
+      <th scope='col'>aircondition </th>
+      <th scope='col'>transmission</th>
+      <th scope='col'>fuel </th>
+      <th scope='col'>img </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.model as |car|}}
+      <tr>
+        <td>{{car.segment}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.carModel}}</td>
+        <td>{{car.doors}}</td>
+        <td>{{car.seats}}</td>
+        <td>{{car.aircondition}}</td>
+        <td>{{car.transmission}}</td>
+        <td>{{car.fuel}}</td>
+        <td>{{car.img}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{outlet}}
+
 {{outlet}}

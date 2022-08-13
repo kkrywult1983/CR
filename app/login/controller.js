@@ -2,8 +2,10 @@ import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
+import { storageFor } from 'ember-local-storage';
 
 export default class LoginController extends Controller {
+  @storageFor('logged-as') loggedAs;
   @service store;
   @tracked loginValue;
   @tracked passwordValue;
@@ -21,14 +23,17 @@ export default class LoginController extends Controller {
   @action
   async onSubmit(event) {
     event.preventDefault();
-    console.log('On SUBMIT was Triggered');
 
-    const usersExist = this.store.query('user', {
+    const usersExist = this.store.query('users', {
       filter: { username: this.loginValue, password: this.passwordValue },
     });
 
-    console.log(this.loginValue);
-    console.log(this.passwordValue);
     console.log(usersExist.length);
+
+    const ifUserExist = Boolean(usersExist.length);
+    if (ifUserExist) {
+      const user = usersExist.firstObject;
+      this.loggedAs.set('id', user.id);
+    }
   }
 }

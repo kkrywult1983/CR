@@ -3,7 +3,6 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { storageFor } from 'ember-local-storage';
-
 export default class LoginController extends Controller {
   @storageFor('logged-as') loggedAs;
   @service store;
@@ -24,16 +23,17 @@ export default class LoginController extends Controller {
   async onSubmit(event) {
     event.preventDefault();
 
-    const usersExist = this.store.query('users', {
+    const usersExist = await this.store.query('user', {
       filter: { username: this.loginValue, password: this.passwordValue },
     });
-
-    console.log(usersExist.length);
 
     const ifUserExist = Boolean(usersExist.length);
     if (ifUserExist) {
       const user = usersExist.firstObject;
       this.loggedAs.set('id', user.id);
+      this.loggedAs.set('username', user.username);
+
+      console.log(ifUserExist); // true - do usunięcia
     }
   }
 }

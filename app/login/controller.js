@@ -22,7 +22,6 @@ export default class LoginController extends Controller {
   @action
   async onSubmit(event) {
     event.preventDefault();
-
     const usersExist = await this.store.query('user', {
       filter: { username: this.loginValue, password: this.passwordValue },
     });
@@ -32,8 +31,9 @@ export default class LoginController extends Controller {
       const user = usersExist.firstObject;
       this.loggedAs.set('id', user.id);
       this.loggedAs.set('username', user.username);
-
-      console.log(ifUserExist); // true - do usunięcia
+      window.location.href = '/';
+    } else {
+      window.location.href = '/register';
     }
   }
 }

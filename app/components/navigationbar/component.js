@@ -11,6 +11,6 @@ export default class NavigationbarComponent extends Component {
   @action onLogout() {
     this.loggedAs.set('id', null);
     this.loggedAs.set('usermname', null);
-    window.location.href = '/';
+    window.location.href = 'login';
   }
 }

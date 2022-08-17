@@ -16,8 +16,8 @@
         <li class='nav-item'>
           <LinkTo
             class='nav-link active'
-            @route='main'
             aria-current='page'
+            @route='main'
           >CarRental</LinkTo>
         </li>
         <li class='nav-item'>
@@ -25,25 +25,25 @@
         </li>
         <li class='nav-item'>
           {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='main.users'>Lista użytkowników</LinkTo>
+          <LinkTo class='nav-link' @route='users'>Lista użytkowników</LinkTo>
         </li>
 
         <li class='nav-item'>
           {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='main.settings'>Ustawienia</LinkTo>
+          <LinkTo class='nav-link' @route='settings'>Ustawienia</LinkTo>
         </li>
         <li class='nav-item'>
           {{! template-lint-disable link-href-attributes }}
           <LinkTo class='nav-link' @route='login'>Logowanie</LinkTo>
         </li>
+        <li class='nav-item'>
+          {{! template-lint-disable link-href-attributes }}
+          <LinkTo class='nav-link' @route='register'>Rejestracja</LinkTo>
+        </li>
         <li class='nav-item mx-50'>
           <span class='nav-link' role='button' {{on 'click' this.onLogout}}>
             WylogujMnie
           </span>
-        </li>
-        <li class='nav-item'>
-          {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='register'>Rejestracja</LinkTo>
         </li>
       </ul>
     </div>

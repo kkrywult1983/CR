@@ -4,6 +4,10 @@ import { storageFor } from 'ember-local-storage';
 
 export default class NavigationbarComponent extends Component {
   @storageFor('logged-as') loggedAs;
+  // @ get isUserLogin (){
+
+  //   return this.service.currentuser
+
   @action onLogout() {
     this.loggedAs.set('id', null);
     this.loggedAs.set('usermname', null);

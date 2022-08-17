@@ -9,7 +9,7 @@ export default class LoginRoute extends Route {
   beforeModel() {
     const userId = this.loggedAs.get('id');
     if (userId) {
-      this.router.transitionTo('/');
+      this.router.transitionTo('login');
       return;
     }
   }

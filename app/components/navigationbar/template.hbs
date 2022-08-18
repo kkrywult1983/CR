@@ -23,15 +23,17 @@
         <li class='nav-item'>
           <LinkTo class='nav-link' @route='fleet'>Flota</LinkTo>
         </li>
-        <li class='nav-item'>
-          {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='users'>Lista użytkowników</LinkTo>
-        </li>
+        {{#if this.isUserLoggedIn}}
+          <li class='nav-item'>
+            {{! template-lint-disable link-href-attributes }}
+            <LinkTo class='nav-link' @route='users'>Lista użytkowników</LinkTo>
+          </li>
 
-        <li class='nav-item'>
-          {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='settings'>Ustawienia</LinkTo>
-        </li>
+          <li class='nav-item'>
+            {{! template-lint-disable link-href-attributes }}
+            <LinkTo class='nav-link' @route='settings'>Ustawienia</LinkTo>
+          </li>
+        {{/if}}
         <li class='nav-item'>
           {{! template-lint-disable link-href-attributes }}
           <LinkTo class='nav-link' @route='login'>Logowanie</LinkTo>
@@ -40,11 +42,13 @@
           {{! template-lint-disable link-href-attributes }}
           <LinkTo class='nav-link' @route='register'>Rejestracja</LinkTo>
         </li>
-        <li class='nav-item mx-50'>
-          <span class='nav-link' role='button' {{on 'click' this.onLogout}}>
-            WylogujMnie
-          </span>
-        </li>
+        {{#if this.isUserLoggedIn}}
+          <li class='nav-item mx-50'>
+            <span class='nav-link' role='button' {{on 'click' this.onLogout}}>
+              WylogujMnie
+            </span>
+          </li>
+        {{/if}}
       </ul>
     </div>
   </div>

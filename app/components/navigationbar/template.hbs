@@ -34,14 +34,17 @@
             <LinkTo class='nav-link' @route='settings'>Ustawienia</LinkTo>
           </li>
         {{/if}}
-        <li class='nav-item'>
-          {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='login'>Logowanie</LinkTo>
-        </li>
-        <li class='nav-item'>
-          {{! template-lint-disable link-href-attributes }}
-          <LinkTo class='nav-link' @route='register'>Rejestracja</LinkTo>
-        </li>
+
+        {{#unless this.isUserLoggedIn}}
+          <li class='nav-item'>
+            {{! template-lint-disable link-href-attributes }}
+            <LinkTo class='nav-link' @route='login'>Logowanie</LinkTo>
+          </li>
+          <li class='nav-item'>
+            {{! template-lint-disable link-href-attributes }}
+            <LinkTo class='nav-link' @route='register'>Rejestracja</LinkTo>
+          </li>
+        {{/unless}}
         {{#if this.isUserLoggedIn}}
           <li class='nav-item mx-50'>
             <span class='nav-link' role='button' {{on 'click' this.onLogout}}>

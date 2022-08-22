@@ -1,22 +1,24 @@
 {{page-title 'Fleet'}}
 <h1>Flota samochodów</h1>
-{{#each this.model as |car|}}
-  <div class='card-group'>
-    <div class='card'>
-      <img class='card-img-top' src='{{car.img}}' alt='Rent this Car' />
-      <div class='card-body'>
-        <h2 class='card-title'>{{car.segment}}</h2>
-        <h3>{{car.brand}} {{car.carModel}}</h3>
-        <h6>Fuel: {{car.fuel}}</h6>
-        <h6>Doors: {{car.doors}}</h6>
-        <h6>Seats: {{car.seats}}</h6>
-        <h6>Aircondition: {{car.aircondition}}</h6>
-        <h6>Transmission: {{car.transmission}}</h6>
-        <p class='card-text'>This is a wider card with supporting text below as
-          a natural lead-in to additional content. This content is a little bit
-          longer.</p>
-        <p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>
+<div class='container'>
+  {{#each this.model as |car|}}
+    <div class='card-group'>
+      <div class='card'>
+        <img class='card-img-top' src='{{car.img}}' alt='Rent this Car' />
+        <div class='card-body'>
+          <h2 class='card-title'>{{car.segment}}</h2>
+          <h3>{{car.brand}} {{car.carModel}}</h3>
+          <h6>Fuel: {{car.fuel}}</h6>
+          <h6>Doors: {{car.doors}}</h6>
+          <h6>Seats: {{car.seats}}</h6>
+          <h6>Aircondition: {{car.aircondition}}</h6>
+          <h6>Transmission: {{car.transmission}}</h6>
+          <p class='card-text'>This is a wider card with supporting text below
+            as a natural lead-in to additional content. This content is a little
+            bit longer.</p>
+          <p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>
+        </div>
       </div>
     </div>
-  </div>
-{{/each}}
+  {{/each}}
+</div>

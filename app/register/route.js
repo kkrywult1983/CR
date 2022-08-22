@@ -10,7 +10,7 @@ export default class RegisterRoute extends Route {
   beforeModel() {
     const userId = this.loggedAs.get('id');
     if (userId) {
-      this.router.transitionTo('home');
+      this.router.transitionTo('main');
       return;
     }
   }

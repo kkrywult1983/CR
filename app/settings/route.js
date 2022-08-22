@@ -14,4 +14,8 @@ export default class SettingsRoute extends Route {
       return;
     }
   }
+
+  model() {
+    return this.session.currentUser;
+  }
 }

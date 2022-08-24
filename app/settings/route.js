@@ -1,21 +1,23 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
-export default class UsersRoute extends Route {
-  @service store;
+export default class SettingsRoute extends Route {
   @service router;
+  @service store;
   @service session;
 
-  beforeModel() {
+  async beforeModel() {
     const { isUserLoggedIn } = this.session;
 
     if (!isUserLoggedIn) {
       this.router.transitionTo('/');
       return;
     }
+    await this.session.setCurrentUser();
   }
 
   model() {
-    return this.store.findAll('user');
+    console.log(this.session.currentUser);
+    return this.session.currentUser;
   }
 }

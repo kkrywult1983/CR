@@ -1,6 +1,6 @@
 {{page-title 'Register'}}
 {{! template-lint-disable no-inline-styles }}
-<section class='vh-100' style='background-color: rgb(65, 73, 179);'>
+<section class='vh-100' style='background-color: rgb(74, 32, 187);'>
   <div class='container h-100'>
     <div class='row d-flex justify-content-center align-items-center h-100'>
       <div class='col-lg-12 col-xl-11'>
@@ -11,7 +11,7 @@
 
                 <p
                   class='text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4'
-                >Register form</p>
+                >Settings</p>
 
                 <form class='mx-1 mx-md-4' {{on 'submit' this.onSubmit}}>
 
@@ -19,10 +19,11 @@
                     <i class='fas fa-user fa-lg me-3 fa-fw'></i>
                     <div class='form-outline flex-fill mb-0'>
                       <input
+                        class='form-control'
                         type='text'
                         id='username'
-                        class='form-control'
-                        placeholder='Enter name'
+                        placeholder='Enter new user name'
+                        value={{this.model.username}}
                         {{on 'input' this.onLoginChange}}
                       />
                       <label class='form-label' for='username'>Username</label>
@@ -36,7 +37,8 @@
                         type='password'
                         id='inputPassword'
                         class='form-control'
-                        placeholder='Enter password'
+                        placeholder='Enter new password'
+                        value={{this.model.password}}
                         {{on 'input' this.onPasswordChange}}
                       />
                       <label
@@ -53,8 +55,9 @@
                         type='text'
                         id='photoURL'
                         class='form-control'
-                        placeholder='Paste Your URL'
-                        {{on 'input' this.onPhotoURLChange}}
+                        placeholder='Paste Your new URL'
+                        value={{this.model.photoURL}}
+                        {{on 'input' this.onURLChange}}
                       />
 
                       <label class='form-label' for='photoURL'>Your picture URL:</label>
@@ -68,7 +71,8 @@
                         type='text'
                         id='email'
                         class='form-control'
-                        placeholder='Your email'
+                        placeholder='Your new email'
+                        value={{this.model.email}}
                         {{on 'input' this.onEmailChange}}
                       />
 
@@ -80,19 +84,15 @@
                     <button
                       type='submit'
                       class='btn btn-primary btn-lg'
-                    >Register</button>
+                    >Update</button>
                   </div>
-
-                  <div class='d-flex justify-content-center mx-4 mb-2 mb-lg-2'>
-                    <h5>Mam juz konto:</h5>
-                  </div>
-                  <div class='d-flex justify-content-center mx-4 mb-2 mb-lg-2'>
-                    <LinkTo @route='login'>
-                      <button
-                        type='button'
-                        class='btn btn-success btn-lg'
-                      >Login</button>
-                    </LinkTo>
+                  <div class='d-flex justify-content-center mx-4 mb-3 mb-lg-4'>
+                    <button
+                      type='button'
+                      class='btn btn-primary btn-lg'
+                      disabled={{this.disableButton}}
+                      {{on 'click' this.discardChanges}}
+                    >Cancel</button>
                   </div>
 
                 </form>

@@ -13,18 +13,18 @@
                   class='text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4'
                 >Settings</p>
 
-                <form class='mx-1 mx-md-4'>
-                  {{!-- {{on 'submit' this.onSubmit}} --}}
+                <form class='mx-1 mx-md-4' {{on 'submit' this.onSubmit}}>
 
                   <div class='d-flex flex-row align-items-center mb-4'>
                     <i class='fas fa-user fa-lg me-3 fa-fw'></i>
                     <div class='form-outline flex-fill mb-0'>
                       <input
+                        class='form-control'
                         type='text'
                         id='username'
-                        class='form-control'
                         placeholder='Enter new user name'
-                        {{!-- {{on 'input' this.onLoginChange}} --}}
+                        value={{this.model.username}}
+                        {{on 'input' this.onLoginChange}}
                       />
                       <label class='form-label' for='username'>Username</label>
                     </div>
@@ -38,7 +38,8 @@
                         id='inputPassword'
                         class='form-control'
                         placeholder='Enter new password'
-                        {{!-- {{on 'input' this.onPasswordChange}} --}}
+                        value={{this.model.password}}
+                        {{on 'input' this.onPasswordChange}}
                       />
                       <label
                         class='form-label'
@@ -55,7 +56,8 @@
                         id='photoURL'
                         class='form-control'
                         placeholder='Paste Your new URL'
-                        {{!-- {{on 'input' this.onPhotoURLChange}} --}}
+                        value={{this.model.photoURL}}
+                        {{on 'input' this.onURLChange}}
                       />
 
                       <label class='form-label' for='photoURL'>Your picture URL:</label>
@@ -70,7 +72,8 @@
                         id='email'
                         class='form-control'
                         placeholder='Your new email'
-                        {{!-- {{on 'input' this.onEmailChange}} --}}
+                        value={{this.model.email}}
+                        {{on 'input' this.onEmailChange}}
                       />
 
                       <label class='form-label' for='email'>Your e-mail:</label>
@@ -82,6 +85,14 @@
                       type='submit'
                       class='btn btn-primary btn-lg'
                     >Update</button>
+                  </div>
+                  <div class='d-flex justify-content-center mx-4 mb-3 mb-lg-4'>
+                    <button
+                      type='button'
+                      class='btn btn-primary btn-lg'
+                      disabled={{this.disableButton}}
+                      {{on 'click' this.discardChanges}}
+                    >Cancel</button>
                   </div>
 
                 </form>

@@ -6,16 +6,18 @@ export default class SettingsRoute extends Route {
   @service store;
   @service session;
 
-  beforeModel() {
+  async beforeModel() {
     const { isUserLoggedIn } = this.session;
 
     if (!isUserLoggedIn) {
       this.router.transitionTo('/');
       return;
     }
+    await this.session.setCurrentUser();
   }
 
   model() {
+    console.log(this.session.currentUser);
     return this.session.currentUser;
   }
 }

@@ -1,9 +1,10 @@
 {{page-title 'Fleet'}}
 <h1>Fleet</h1>
 <div class='container'>
-  {{#each this.model as |car|}}
-    <div class='card-group'>
-      <div class='card'>
+  <div class='row'>
+    {{#each this.model as |car|}}
+      <div class='card col-md-4 col-sm-6'>
+
         <img class='card-img-top' src='{{car.img}}' alt='Rent this Car' />
         <div class='card-body'>
           <h2 class='card-title'>{{car.segment}}</h2>
@@ -19,6 +20,7 @@
           <p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>
         </div>
       </div>
-    </div>
-  {{/each}}
+
+    {{/each}}
+  </div>
 </div>

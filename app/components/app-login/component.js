@@ -1,8 +1,9 @@
-import Controller from '@ember/controller';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
-export default class LoginController extends Controller {
+
+export default class AppLoginComponent extends Component {
   @service session;
   @service store;
   @tracked loginValue;

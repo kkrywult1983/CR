@@ -1,7 +1,8 @@
-import Controller from '@ember/controller';
+import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
-export default class SettingsController extends Controller {
+
+export default class AppSettingsComponent extends Component {
   @service store;
   @service router;
 

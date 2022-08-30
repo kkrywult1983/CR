@@ -43,8 +43,16 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Diesel',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_tablet/public/zdjecia_aut/peugeot_5008_0709styp_007_b.jpg?itok=RFNsYsAA',
-
-      // rents: [rentModel, rentModel, ...]
+      rents: [
+        {
+          from: new Date('2022-09-01 00:00'),
+          to: new Date('2022-09-12 00:00'),
+        },
+        {
+          from: new Date('2022-09-16 00:00'),
+          to: new Date('2022-09-23 00:00'),
+        },
+      ],
     };
 
     const carModel_2 = {
@@ -58,6 +66,16 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_tablet/public/zdjecia_aut/q5-1.jpg?itok=S40tSRca',
+      rents: [
+        {
+          from: new Date('2022-09-03 12:00'),
+          to: new Date('2022-09-12 22:00'),
+        },
+        {
+          from: new Date('2022-09-16 10:00'),
+          to: new Date('2022-09-18 15:00'),
+        },
+      ],
     };
 
     const carModel_3 = {
@@ -71,6 +89,16 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/kia-optimasportswagon-jfpewgngtlinemy19-4sssilysilver-18d_0006.jpg?itok=kxGHHWNn',
+      rents: [
+        {
+          from: new Date('2022-10-03 12:00'),
+          to: new Date('2022-10-12 22:00'),
+        },
+        {
+          from: new Date('2022-09-20 10:00'),
+          to: new Date('2022-09-22 15:00'),
+        },
+      ],
     };
 
     const carModel_4 = {
@@ -84,6 +112,16 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Diesel',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/bez_tytulu_0.jpg?itok=2mEb7Gbc',
+      rents: [
+        {
+          from: new Date('2022-09-03 12:00'),
+          to: new Date('2022-09-12 22:00'),
+        },
+        {
+          from: new Date('2022-09-16 10:00'),
+          to: new Date('2022-09-18 15:00'),
+        },
+      ],
     };
 
     const carModel_5 = {
@@ -97,6 +135,16 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Gas',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/a3.png?itok=UOB5NK6R',
+      rents: [
+        {
+          from: new Date('2022-09-03 12:00'),
+          to: new Date('2022-09-12 22:00'),
+        },
+        {
+          from: new Date('2022-09-16 10:00'),
+          to: new Date('2022-09-18 15:00'),
+        },
+      ],
     };
 
     const carModel_6 = {
@@ -110,6 +158,12 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_duzy_dekstop/public/zdjecia_aut/2017-toyota-yaris-hybrid-red-dynamic-06.jpg?itok=wAbgmqes',
+      rents: [
+        {
+          from: new Date('2022-09-04 12:00'),
+          to: new Date('2022-09-22 22:00'),
+        },
+      ],
     };
 
     const carModel1 = this.store.createRecord('car', carModel_1);

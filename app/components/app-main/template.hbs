@@ -1,0 +1,56 @@
+{{page-title 'Main'}}
+<div class='container'>
+  <h2>Welcome </h2>
+
+  <div class='container border border-4 border-dark p-4'>
+
+    <label for='basic-url' class='form-label'>Rent place</label>
+    <select
+      class='form-select form-select-sm'
+      aria-label='.form-select-sm example'
+    >
+      <option selected>Select rent place</option>
+      <option value='1'>One</option>
+      <option value='2'>Two</option>
+      <option value='3'>Three</option>
+    </select>
+    <br />
+    <div class='container'>
+      <span class='date'>
+        <div class='input-group mb-4'>
+          <span
+            class='input-group-text'
+            name='inputGroup-sizing-default'
+          >From:</span>
+          <PikadayInput
+            @format='YYYY-MM-DD'
+            @value={{this.dateFrom}}
+            @onSelection={{this.onDateFromChange}}
+            @readonly={{'readonly'}}
+          />
+        </div>
+      </span>
+      <span class='date'>
+        <div class='input-group mb-3'>
+          <span
+            class='input-group-text'
+            name='inputGroup-sizing-default'
+          >To:</span>
+          <PikadayInput
+            @format='YYYY-MM-DD'
+            @value={{this.dateTo}}
+            @onSelection={{this.onDateToChange}}
+            @readonly={{'readonly'}}
+          />
+        </div>
+      </span>
+      <button
+        type='button'
+        class='btn btn-secondary'
+        {{on 'click' this.sortToggle}}
+      >Wynajmuję
+        {{this.sortArrow}}
+      </button>
+    </div>
+  </div>
+</div>

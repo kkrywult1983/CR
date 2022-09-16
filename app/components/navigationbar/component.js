@@ -11,7 +11,6 @@ export default class NavigationbarComponent extends Component {
   get isUserLoggedIn() {
     return this.loggedAs.get('id');
   }
-
   get userLoggedInName() {
     return this.loggedAs.get('username');
   }

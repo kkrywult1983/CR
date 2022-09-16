@@ -13,7 +13,7 @@ export default class AppLoginComponent extends Component {
   @tracked loginValue;
   @tracked passwordValue;
   @tracked userExist;
-  @tracked emptyLoginOrPasswordInput;
+  @tracked emptyLoginOrPasswordInput = false;
 
   @action
   onLoginChange(event) {
@@ -33,19 +33,9 @@ export default class AppLoginComponent extends Component {
     const users = await this.store.query('user', {
       filter: { username: this.loginValue, password: this.passwordValue },
     });
-
-    if (loginValue === undefined || passwordValue === undefined) {
-      console.log(Boolean(!this.emptyLoginOrPasswordInput));
-      this.emptyLoginOrPasswordInput = Boolean(!this.emptyLoginOrPasswordInput);
-      return this.emptyLoginOrPasswordInput;
-    } else {
-      console.log(`Ilość userów ${Boolean(!users.length)}`);
-      this.userExist = Boolean(!users.length);
-      this.emptyLoginOrPasswordInput = false;
-      this.loginValue = undefined;
-      this.passwordValue = undefined;
-      return this.userExist;
-    }
+    console.log(`Ilość userów ${Boolean(!users.length)}`);
+    this.userExist = Boolean(!users.length);
+    return this.userExist;
   }
 
   @action

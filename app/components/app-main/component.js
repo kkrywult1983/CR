@@ -1,23 +1,26 @@
 import Component from '@glimmer/component';
-// import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import moment from 'moment';
 
-// eslint-disable-next-line ember/no-empty-glimmer-component-classes
 export default class MainComponent extends Component {
   @service router;
 
   @action
   onChangeDate(queryParamKey, date) {
-    const formattedDate = moment(date).format('DD-MM-YYYY');
+    const formattedDate = moment(date).format('YYYY-MM-DD');
     this.router.transitionTo({
       queryParams: { [queryParamKey]: formattedDate },
     });
   }
 
   @action
-  onShowAvailableFleet() {
-    console.log('List');
+  clearForm() {
+    this.router.transitionTo({
+      queryParams: {
+        dateFrom: null,
+        dateTo: null,
+      },
+    });
   }
 }

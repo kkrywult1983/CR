@@ -29,9 +29,7 @@
             @readonly={{'readonly'}}
           />
         </div>
-        <p>{{@dateFrom}}</p>
       </span>
-
       <span class='date'>
         <div class='input-group mb-3'>
           <span
@@ -45,15 +43,17 @@
             @readonly={{'readonly'}}
           />
         </div>
-        <p>{{@dateTo}}</p>
       </span>
       <button
         type='button'
         class='btn btn-secondary'
-        {{on 'click' this.onShowAvailableFleet}}
+        {{on 'click' this.clearForm}}
       >
-        Wynajmuję
+        Clear
       </button>
     </div>
   </div>
+</div>
+<div class='container'>
+  <FleetList @cars={{@cars}} />
 </div>

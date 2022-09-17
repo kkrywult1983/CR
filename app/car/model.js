@@ -10,4 +10,5 @@ export default class CarModel extends Model {
   @attr('string') transmission;
   @attr('string') fuel;
   @attr('string') img;
+  @attr({ defaultValue: () => [] }) rents;
 }

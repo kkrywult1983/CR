@@ -24,12 +24,14 @@
           >From:</span>
           <PikadayInput
             @format='YYYY-MM-DD'
-            @value={{this.dateFrom}}
-            @onSelection={{this.onDateFromChange}}
+            @value={{@dateFrom}}
+            @onSelection={{fn this.onChangeDate 'dateFrom'}}
             @readonly={{'readonly'}}
           />
         </div>
+        <p>{{@dateFrom}}</p>
       </span>
+
       <span class='date'>
         <div class='input-group mb-3'>
           <span
@@ -38,18 +40,19 @@
           >To:</span>
           <PikadayInput
             @format='YYYY-MM-DD'
-            @value={{this.dateTo}}
-            @onSelection={{this.onDateToChange}}
+            @value={{@dateTo}}
+            @onSelection={{fn this.onChangeDate 'dateTo'}}
             @readonly={{'readonly'}}
           />
         </div>
+        <p>{{@dateTo}}</p>
       </span>
       <button
         type='button'
         class='btn btn-secondary'
-        {{on 'click' this.sortToggle}}
-      >Wynajmuję
-        {{this.sortArrow}}
+        {{on 'click' this.onShowAvailableFleet}}
+      >
+        Wynajmuję
       </button>
     </div>
   </div>

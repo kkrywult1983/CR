@@ -1,4 +1,9 @@
 @import 'bootstrap';
+@import 'ember-power-select';
+
+body {
+  background-color: rgb(59, 158, 145);
+}
 
 .nav-link {
   font-weight: bold;
@@ -12,5 +17,3 @@
 .ember-tooltip {
   padding: 0;
 }
-
-@import 'ember-power-select';

@@ -1,10 +1,11 @@
 <div class='container'>
-  <div class='row'>
+  <div class='row my-2 center border border-4 border-secondary'>
     {{#each @cars as |car|}}
       <div class='card col-md-4 col-sm-6'>
 
         <img class='card-img-top' src='{{car.img}}' alt='Rent this Car' />
         <div class='card-body'>
+          {{!-- {{on 'click' (fn this.goToRentDetails {{@model.id}}) }} --}}
           <h2 class='card-title'>{{car.segment}}</h2>
           <h3>{{car.brand}} {{car.carModel}}</h3>
           <h6>Fuel: {{car.fuel}}</h6>

@@ -44,6 +44,9 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Diesel',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_tablet/public/zdjecia_aut/peugeot_5008_0709styp_007_b.jpg?itok=RFNsYsAA',
+      subscript:
+        '7-miejscowy SUV PEUGEOT 5008 ma nowoczesną sylwetkę o eleganckich, dojrzałych kształtach, która jest wyrazem równowagi pomiędzy siłą i wysublimowaniem.',
+
       rents: [
         {
           from: moment('2022-09-01 00:00').toDate(),
@@ -67,6 +70,8 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_tablet/public/zdjecia_aut/q5-1.jpg?itok=S40tSRca',
+      subscript:
+        'To pierwszy w segmencie premium SUV o napędzie hybrydowym, w którym seryjnie montowany jest akumulator litowo-jonowy. Napęd stanowią silnik 2.0 TFSI o mocy 155 kW (211 KM) i silnik elektryczny o mocy do 40 kW (54 KM)',
       rents: [
         {
           from: moment('2022-09-03 12:00').toDate(),
@@ -90,6 +95,8 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/kia-optimasportswagon-jfpewgngtlinemy19-4sssilysilver-18d_0006.jpg?itok=kxGHHWNn',
+      subscript:
+        'Kia Optima to auto osobowe klasy średniej pochodzące z koreańskiej stajni Kia Motors. Światło dzienne model ten ujrzał w 2000 roku, a dwie pierwsze generacje Kii Optimy nosiły również nazwę Kia Magentis. ',
       rents: [
         {
           from: moment('2022-10-03 12:00').toDate(),
@@ -113,6 +120,8 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Diesel',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/bez_tytulu_0.jpg?itok=2mEb7Gbc',
+      subscript:
+        'Toyota Camry to spektakularny triumf nowoczesnego podejścia do projektowania samochodów. Dynamiczny i wydajny silnik 2.5 Hybrid Dynamic Force 218 KM e-CVT.',
       rents: [
         {
           from: moment('2022-09-03 12:00').toDate(),
@@ -136,6 +145,8 @@ export default class ApplicationRoute extends Route {
       transmission: 'Automat',
       fuel: 'Gas',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_mobile/public/zdjecia_aut/a3.png?itok=UOB5NK6R',
+      subscript:
+        'Audi A3 I zostało zaprezentowane po raz pierwszy w 1996 roku. Samochód otrzymał kod fabryczny 8L. Auto oferowano z kilkoma konstrukcjami silników.',
       rents: [
         {
           from: moment('2022-09-03 12:00').toDate(),
@@ -159,6 +170,8 @@ export default class ApplicationRoute extends Route {
       transmission: 'Manual',
       fuel: 'Benzyna',
       img: 'https://99rent.pl/sites/all/pliki/styles/slajd_flota_duzy_dekstop/public/zdjecia_aut/2017-toyota-yaris-hybrid-red-dynamic-06.jpg?itok=wAbgmqes',
+      subscript:
+        'Silniki Toyoty Yaris charakteryzują się pojemnością 998 – 1798 cm3 oraz mocą 65 – 212 KM. Auto przyspiesza do 100 km/h w 10,8 – 15,3 s, a maksymalną prędkością, jaką może osiągnąć, jest 155 – 175 km/h.',
       rents: [
         {
           from: moment('2022-09-04 12:00').toDate(),
@@ -167,12 +180,12 @@ export default class ApplicationRoute extends Route {
       ],
     };
 
-    const carModel1 = this.store.createRecord('car', carModel_1);
-    const carModel2 = this.store.createRecord('car', carModel_2);
-    const carModel3 = this.store.createRecord('car', carModel_3);
-    const carModel4 = this.store.createRecord('car', carModel_4);
-    const carModel5 = this.store.createRecord('car', carModel_5);
-    const carModel6 = this.store.createRecord('car', carModel_6);
+    const carModel1 = await this.store.createRecord('car', carModel_1);
+    const carModel2 = await this.store.createRecord('car', carModel_2);
+    const carModel3 = await this.store.createRecord('car', carModel_3);
+    const carModel4 = await this.store.createRecord('car', carModel_4);
+    const carModel5 = await this.store.createRecord('car', carModel_5);
+    const carModel6 = await this.store.createRecord('car', carModel_6);
 
     await carModel1.save();
     await carModel2.save();

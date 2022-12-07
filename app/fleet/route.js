@@ -5,9 +5,6 @@ export default class FleetRoute extends Route {
   @service store;
 
   async model() {
-    // const { car_id } = params;
-    const data = await this.store.findAll('car');
-    // const carId = data.find(({ id }) => id === car_id);
-    return data;
+    return await this.store.findAll('car');
   }
 }

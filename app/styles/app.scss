@@ -2,7 +2,7 @@
 @import 'ember-power-select';
 
 body {
-  background-color: rgb(59, 158, 145);
+  background-color: rgb(110, 207, 194);
 }
 
 .nav-link {
@@ -15,5 +15,9 @@ body {
   max-width: 25%;
 }
 .ember-tooltip {
-  padding: 0;
+  padding: 10;
+}
+
+.card-contain {
+  text-decoration: none;
 }

@@ -1,3 +1,5 @@
 {{page-title 'Fleet'}}
 <h1>Choose car from Fleet</h1>
-<Fleet-List @cars={{this.model}} />
+{{#each this.model as |car|}}
+  <FleetList @cars={{car}} />
+{{/each}}

@@ -13,7 +13,7 @@ export default class FleetController extends Controller {
   queryParams = ['firstDate', 'secondDate', 'sortParam'];
 
   get checkFilterBetweenDates() {
-    console.log(Boolean(this.firstDate && this.secondDate));
+    Boolean(this.firstDate && this.secondDate);
     return Boolean(this.firstDate && this.secondDate);
   }
 

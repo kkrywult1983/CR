@@ -33,7 +33,7 @@ export default class AppLoginComponent extends Component {
     const users = await this.store.query('user', {
       filter: { username: this.loginValue, password: this.passwordValue },
     });
-    console.log(`Ilość userów ${Boolean(!users.length)}`);
+
     this.userExist = Boolean(!users.length);
     return this.userExist;
   }

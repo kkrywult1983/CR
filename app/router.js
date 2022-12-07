@@ -11,7 +11,7 @@ Router.map(function () {
   this.route('settings');
   this.route('users');
   this.route('fleet');
-  // this.route('fleet', { path: 'fleet/:car_id' });
+  this.route('cars-details', { path: '/cars-details/:car_id' });
   this.route('rental');
   this.route('login');
   this.route('register');

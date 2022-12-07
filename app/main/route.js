@@ -10,13 +10,16 @@ export default class MainRoute extends Route {
   };
 
   async model(params) {
-    console.log(params);
     const cars = await this.store.findAll('car');
-    console.log(cars.toArray());
     return cars
       .toArray()
       .filter((car) =>
         car.isAvailableRentRange(params.dateFrom, params.dateTo)
       );
+  }
+
+  async cars() {
+    const car = await this.store.findAll('car');
+    return car;
   }
 }

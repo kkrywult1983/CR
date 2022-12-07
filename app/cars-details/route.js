@@ -6,8 +6,6 @@ export default class CarsDetailsRoute extends Route {
 
   async model(params) {
     const { car_id } = params;
-    const allCars = await this.store.findAll('car');
-    const carId = allCars.find(({ id }) => id === car_id);
-    return carId;
+    return await this.store.findRecord('car', car_id);
   }
 }

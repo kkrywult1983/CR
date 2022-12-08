@@ -49,12 +49,12 @@ export default class ApplicationRoute extends Route {
 
       rents: [
         {
-          from: moment('2022-09-01 00:00').toDate(),
-          to: moment('2022-09-12 00:00').toDate(),
+          from: moment('2022-12-01 00:00').toDate(),
+          to: moment('2022-12-12 00:00').toDate(),
         },
         {
-          from: moment('2022-09-16 00:00').toDate(),
-          to: moment('2022-09-23 00:00').toDate(),
+          from: moment('2022-12-16 00:00').toDate(),
+          to: moment('2022-12-23 00:00').toDate(),
         },
       ],
     };
@@ -74,12 +74,12 @@ export default class ApplicationRoute extends Route {
         'To pierwszy w segmencie premium SUV o napędzie hybrydowym, w którym seryjnie montowany jest akumulator litowo-jonowy. Napęd stanowią silnik 2.0 TFSI o mocy 155 kW (211 KM) i silnik elektryczny o mocy do 40 kW (54 KM)',
       rents: [
         {
-          from: moment('2022-09-03 12:00').toDate(),
-          to: moment('2022-09-12 22:00').toDate(),
+          from: moment('2022-12-03 12:00').toDate(),
+          to: moment('2022-12-12 22:00').toDate(),
         },
         {
-          from: moment('2022-09-16 10:00').toDate(),
-          to: moment('2022-09-18 15:00').toDate(),
+          from: moment('2022-12-16 10:00').toDate(),
+          to: moment('2022-12-18 15:00').toDate(),
         },
       ],
     };
@@ -99,12 +99,12 @@ export default class ApplicationRoute extends Route {
         'Kia Optima to auto osobowe klasy średniej pochodzące z koreańskiej stajni Kia Motors. Światło dzienne model ten ujrzał w 2000 roku, a dwie pierwsze generacje Kii Optimy nosiły również nazwę Kia Magentis. ',
       rents: [
         {
-          from: moment('2022-10-03 12:00').toDate(),
-          to: moment('2022-10-12 22:00').toDate(),
+          from: moment('2022-12-03 12:00').toDate(),
+          to: moment('2022-12-12 22:00').toDate(),
         },
         {
-          from: moment('2022-09-20 10:00').toDate(),
-          to: moment('2022-09-22 15:00').toDate(),
+          from: moment('2022-12-20 10:00').toDate(),
+          to: moment('2022-12-22 15:00').toDate(),
         },
       ],
     };
@@ -124,12 +124,12 @@ export default class ApplicationRoute extends Route {
         'Toyota Camry to spektakularny triumf nowoczesnego podejścia do projektowania samochodów. Dynamiczny i wydajny silnik 2.5 Hybrid Dynamic Force 218 KM e-CVT.',
       rents: [
         {
-          from: moment('2022-09-03 12:00').toDate(),
-          to: moment('2022-09-12 22:00').toDate(),
+          from: moment('2022-12-03 12:00').toDate(),
+          to: moment('2022-12-12 22:00').toDate(),
         },
         {
-          from: moment('2022-09-16 10:00').toDate(),
-          to: moment('2022-09-18 15:00').toDate(),
+          from: moment('2022-12-16 10:00').toDate(),
+          to: moment('2022-12-18 15:00').toDate(),
         },
       ],
     };
@@ -149,12 +149,12 @@ export default class ApplicationRoute extends Route {
         'Audi A3 I zostało zaprezentowane po raz pierwszy w 1996 roku. Samochód otrzymał kod fabryczny 8L. Auto oferowano z kilkoma konstrukcjami silników.',
       rents: [
         {
-          from: moment('2022-09-03 12:00').toDate(),
-          to: moment('2022-09-12 22:00').toDate(),
+          from: moment('2022-12-03 12:00').toDate(),
+          to: moment('2022-12-12 22:00').toDate(),
         },
         {
-          from: moment('2022-09-16 10:00').toDate(),
-          to: moment('2022-09-18 15:00').toDate(),
+          from: moment('2022-12-16 10:00').toDate(),
+          to: moment('2022-12-18 15:00').toDate(),
         },
       ],
     };

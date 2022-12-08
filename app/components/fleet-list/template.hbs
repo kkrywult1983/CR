@@ -1,5 +1,9 @@
 {{#each @cars as |car|}}
-  <LinkTo @route='cars-details' @model={{car.id}} class='container'>
+  <LinkTo
+    @route='cars-details'
+    @model={{car.id}}
+    class='container text-decoration-none text-dark'
+  >
     <FleetList::CarDetails @car={{car}} />
   </LinkTo>
 {{/each}}

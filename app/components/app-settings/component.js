@@ -7,34 +7,34 @@ export default class AppSettingsComponent extends Component {
   @service router;
 
   get disableButton() {
-    return !this.model.hasDirtyAttributes;
+    return !this.args.currentUser.hasDirtyAttributes;
   }
 
   @action
   discardChanges() {
-    this.model.rollbackAttributes();
+    this.args.currentUser.rollbackAttributes();
   }
 
   @action
   onLoginChange(event) {
-    this.model.username = event.target.value;
+    this.args.currentUser.username = event.target.value;
   }
   @action
   onPasswordChange(event) {
-    this.model.password = event.target.value;
+    this.args.currentUser.password = event.target.value;
   }
   @action
   onURLChange(event) {
-    this.model.photoURL = event.target.value;
+    this.args.currentUser.photoURL = event.target.value;
   }
 
   @action
   onEmailChange(event) {
-    this.model.email = event.target.value;
+    this.args.currentUser.email = event.target.value;
   }
   @action
   async onSubmit(event) {
     event.preventDefault();
-    await this.model.save();
+    await this.args.currentUser.save();
   }
 }

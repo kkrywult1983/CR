@@ -9,12 +9,20 @@ export default class MainRoute extends Route {
     dateTo: { refreshModel: true },
   };
 
-  async model() {
-    const cars = await this.store.findAll('car');
-    return cars;
-    // .toArray()
-    // .filter((car) =>
-    //   car.isAvailableRentRange(params.dateFrom, params.dateTo)
-    // );
+  async model(params) {
+    console.log(params);
+    if (params.dateFrom === null || params.dateTo === null) {
+      return 0;
+    } else if (params.dateFrom > params.dateTo) {
+      console.log('Podałes zła datę');
+    } else {
+      const cars = await this.store.findAll('car');
+
+      return cars
+        .toArray()
+        .filter((car) =>
+          car.isAvailableRentRange(params.dateFrom, params.dateTo)
+        );
+    }
   }
 }

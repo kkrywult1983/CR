@@ -11,21 +11,6 @@
         <h6>Aircondition: {{@car.aircondition}}</h6>
         <h6>Transmission: {{@car.transmission}}</h6>
         <h6>Subscript:</h6><p>{{@car.subscript}}</p>
-        {{#if this.isUserLoggedIn}}
-          <button class='btn btn-info' type='button'>
-            <i class='mr-2 font-weight-bold'></i>
-            Check summary
-          </button>
-        {{/if}}
-        {{#unless this.isUserLoggedIn}}
-          <h2>Please log to rent car.</h2>
-          <LinkTo class='nav-link' @route='login'>
-            <button class='btn btn-info' type='button'>
-              <i class='mr-2 font-weight-bold'></i>
-              LogIn
-            </button>
-          </LinkTo>
-        {{/unless}}
       </div>
     </div>
   </div>

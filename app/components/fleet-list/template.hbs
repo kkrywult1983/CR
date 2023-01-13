@@ -2,8 +2,39 @@
   <LinkTo
     @route='cars-details'
     @model={{car.id}}
+    @query={{hash dateFrom=@dateFrom dateTo=@dateTo}}
     class='container text-decoration-none text-dark'
   >
-    <FleetList::CarDetails @car={{car}} />
+    <div class='container'>
+      <div class='row my-2 center border border-4 border-secondary'>
+        <div class='card'>
+          <img class='card-img-top' src='{{car.img}}' alt='Rent this Car' />
+          <div class='card-body'>
+            <h2 class='card-title'>{{car.segment}}</h2>
+            <h3>{{car.brand}} {{car.carModel}}</h3>
+            <h6>Fuel: {{car.fuel}}</h6>
+            <h6>Doors: {{car.doors}}</h6>
+            <h6>Seats: {{car.seats}}</h6>
+            <h6>Aircondition: {{car.aircondition}}</h6>
+            <h6>Transmission: {{car.transmission}}</h6>
+            {{#if this.isUserLoggedIn}}
+              <button class='btn btn-info' type='button'>
+                <i class='mr-2 font-weight-bold'></i>
+                Check summary
+              </button>
+            {{/if}}
+            {{#unless this.isUserLoggedIn}}
+              <h2>Please log to rent car.</h2>
+              <LinkTo class='nav-link' @route='login'>
+                <button class='btn btn-info' type='button'>
+                  <i class='mr-2 font-weight-bold'></i>
+                  LogIn
+                </button>
+              </LinkTo>
+            {{/unless}}
+          </div>
+        </div>
+      </div>
+    </div>
   </LinkTo>
 {{/each}}

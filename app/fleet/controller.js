@@ -10,18 +10,18 @@ export default class FleetController extends Controller {
   @tracked secondDate;
   @tracked sortParam;
 
-  queryParams = ['firstDate', 'secondDate', 'sortParam'];
+  // queryParams = ['firstDate', 'secondDate', 'sortParam'];
 
-  get checkFilterBetweenDates() {
-    Boolean(this.firstDate && this.secondDate);
-    return Boolean(this.firstDate && this.secondDate);
-  }
+  // get checkFilterBetweenDates() {
+  //   Boolean(this.firstDate && this.secondDate);
+  //   return Boolean(this.firstDate && this.secondDate);
+  // }
 
-  get checkFilterFromDate() {
-    return !this.checkFilterBetweenDates && Boolean(this.firstDate);
-  }
+  // get checkFilterFromDate() {
+  //   return !this.checkFilterBetweenDates && Boolean(this.firstDate);
+  // }
 
-  get checkFilterToDate() {
-    return !this.checkFilterBetweenDates && Boolean(this.secondDate);
-  }
+  // get checkFilterToDate() {
+  //   return !this.checkFilterBetweenDates && Boolean(this.secondDate);
+  // }
 }

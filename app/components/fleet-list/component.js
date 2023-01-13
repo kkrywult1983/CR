@@ -4,7 +4,7 @@ import Component from '@glimmer/component';
 import { storageFor } from 'ember-local-storage';
 import { inject as service } from '@ember/service';
 
-export default class CarDetailsComponent extends Component {
+export default class FleetListComponent extends Component {
     @storageFor('logged-as') loggedAs;
     @service session;
 

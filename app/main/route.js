@@ -17,7 +17,6 @@ export default class MainRoute extends Route {
       console.log('Podałes zła datę');
     } else {
       const cars = await this.store.findAll('car');
-
       return cars
         .toArray()
         .filter((car) =>

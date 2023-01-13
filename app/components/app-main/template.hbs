@@ -16,7 +16,7 @@
       <option value='3'>Three</option>
     </select>
     <br />
-    <div class='container'>
+    <div class='container border border-secondary'>
       <p class='fs-5 fw-bold'>Choose rent date:</p>
       <span class='date'>
         <div class='input-group mb-4'>
@@ -47,6 +47,7 @@
         </div>
       </span>
       <button
+        class='my-2'
         type='button'
         class='btn btn-secondary'
         {{on 'click' this.clearForm}}
@@ -55,9 +56,10 @@
       </button>
     </div>
   </div>
+
   <h2>Cars available in choosed range</h2>
 </div>
 
 <div class='container my-2'>
-  <FleetList @cars={{@cars}} />
+  <FleetList @cars={{@cars}} @dateFrom={{@dateFrom}} @dateTo={{@dateTo}} />
 </div>

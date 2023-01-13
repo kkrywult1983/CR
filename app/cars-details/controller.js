@@ -3,7 +3,7 @@ import { tracked } from '@glimmer/tracking';
 import Moment from 'moment';
 import MomentRange from 'moment-range';
 
-export default class MainController extends Controller {
+export default class CarDetailsController extends Controller {
   @tracked dateFrom = null;
   @tracked dateTo = null;
 
@@ -12,5 +12,9 @@ export default class MainController extends Controller {
   get bookedDays() {
     const moment = MomentRange.extendMoment(Moment);
     return moment(this.dateFrom).diff(moment(this.dateTo), 'days') * -1;
+  }
+
+  get summary() {
+    return this.bookedDays * this.model.dayRentPrice;
   }
 }

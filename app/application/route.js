@@ -50,12 +50,12 @@ export default class ApplicationRoute extends Route {
 
       rents: [
         {
-          from: moment('2022-12-01 00:00').toDate(),
-          to: moment('2022-12-12 00:00').toDate(),
+          from: moment('2023-04-01 00:00').toDate(),
+          to: moment('2023-04-12 00:00').toDate(),
         },
         {
-          from: moment('2022-12-16 00:00').toDate(),
-          to: moment('2022-12-23 00:00').toDate(),
+          from: moment('2023-04-16 00:00').toDate(),
+          to: moment('2023-04-28 00:00').toDate(),
         },
       ],
     };
@@ -76,12 +76,12 @@ export default class ApplicationRoute extends Route {
         'To pierwszy w segmencie premium SUV o napędzie hybrydowym, w którym seryjnie montowany jest akumulator litowo-jonowy. Napęd stanowią silnik 2.0 TFSI o mocy 155 kW (211 KM) i silnik elektryczny o mocy do 40 kW (54 KM)',
       rents: [
         {
-          from: moment('2022-12-03 12:00').toDate(),
-          to: moment('2022-12-12 22:00').toDate(),
+          from: moment('2023-02-03 12:00').toDate(),
+          to: moment('2023-02-12 22:00').toDate(),
         },
         {
-          from: moment('2022-12-16 10:00').toDate(),
-          to: moment('2022-12-18 15:00').toDate(),
+          from: moment('2023-02-16 10:00').toDate(),
+          to: moment('2023-02-18 15:00').toDate(),
         },
       ],
     };
@@ -102,12 +102,12 @@ export default class ApplicationRoute extends Route {
         'Kia Optima to auto osobowe klasy średniej pochodzące z koreańskiej stajni Kia Motors. Światło dzienne model ten ujrzał w 2000 roku, a dwie pierwsze generacje Kii Optimy nosiły również nazwę Kia Magentis. ',
       rents: [
         {
-          from: moment('2022-12-03 12:00').toDate(),
-          to: moment('2022-12-12 22:00').toDate(),
+          from: moment('2023-09-03 12:00').toDate(),
+          to: moment('2023-09-12 22:00').toDate(),
         },
         {
-          from: moment('2022-12-20 10:00').toDate(),
-          to: moment('2022-12-22 15:00').toDate(),
+          from: moment('2023-12-20 10:00').toDate(),
+          to: moment('2023-12-22 15:00').toDate(),
         },
       ],
     };
@@ -128,12 +128,12 @@ export default class ApplicationRoute extends Route {
         'Toyota Camry to spektakularny triumf nowoczesnego podejścia do projektowania samochodów. Dynamiczny i wydajny silnik 2.5 Hybrid Dynamic Force 218 KM e-CVT.',
       rents: [
         {
-          from: moment('2022-12-03 12:00').toDate(),
-          to: moment('2022-12-12 22:00').toDate(),
+          from: moment('2023-06-03 12:00').toDate(),
+          to: moment('2023-06-12 22:00').toDate(),
         },
         {
-          from: moment('2022-12-16 10:00').toDate(),
-          to: moment('2022-12-18 15:00').toDate(),
+          from: moment('2023-07-16 10:00').toDate(),
+          to: moment('2023-08-16 15:00').toDate(),
         },
       ],
     };
@@ -154,12 +154,12 @@ export default class ApplicationRoute extends Route {
         'Audi A3 I zostało zaprezentowane po raz pierwszy w 1996 roku. Samochód otrzymał kod fabryczny 8L. Auto oferowano z kilkoma konstrukcjami silników.',
       rents: [
         {
-          from: moment('2022-12-03 12:00').toDate(),
-          to: moment('2022-12-12 22:00').toDate(),
+          from: moment('2023-03-03 12:00').toDate(),
+          to: moment('2023-03-12 22:00').toDate(),
         },
         {
-          from: moment('2022-12-16 10:00').toDate(),
-          to: moment('2022-12-18 15:00').toDate(),
+          from: moment('2023-01-16 10:00').toDate(),
+          to: moment('2023-02-20 15:00').toDate(),
         },
       ],
     };
@@ -180,8 +180,8 @@ export default class ApplicationRoute extends Route {
         'Silniki Toyoty Yaris charakteryzują się pojemnością 998 – 1798 cm3 oraz mocą 65 – 212 KM. Auto przyspiesza do 100 km/h w 10,8 – 15,3 s, a maksymalną prędkością, jaką może osiągnąć, jest 155 – 175 km/h.',
       rents: [
         {
-          from: moment('2022-09-04 12:00').toDate(),
-          to: moment('2022-09-22 22:00').toDate(),
+          from: moment('2023-09-04 12:00').toDate(),
+          to: moment('2023-09-22 22:00').toDate(),
         },
       ],
     };

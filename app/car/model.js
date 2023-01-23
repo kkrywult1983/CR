@@ -20,11 +20,6 @@ export default class CarModel extends Model {
 
     const overlapsedDates = this.rents.filter((rent) => {
       const { from, to } = rent;
-      // console.log({ from, to });
-
-      // const rangeOfBookedDays = [
-      //   moment(dateFrom).diff(moment(dateTo), 'days') * (-1)
-      // ]
 
       const bookedDates = [
         moment(from).startOf('day'),
@@ -41,7 +36,6 @@ export default class CarModel extends Model {
 
       // const countDays = moment.range(rangeBookedDates)
 
-
       if (rangeBookedDates.overlaps(rangeSearchDates)) {
         return rent;
       }
@@ -54,4 +48,3 @@ export default class CarModel extends Model {
   // const result = isAvailableRentRange('2022-09-01', '2022-09-30');
   // console.log('isAvailable: ', result);
 }
-

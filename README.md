@@ -3,7 +3,7 @@
 === :blue_car: ===
 
 - [x] Możliwość rejestracji użytkownika
-- [ ] Tylko zarejestrowany uzytkownik może wynająć samochód
+- [x] Tylko zarejestrowany uzytkownik może wynająć samochód
 - [x] Możliwość logowania
 - [x] Strona główna:
 
@@ -22,9 +22,9 @@
 - [x] Settings:
 
   - [x] Mozliwośc zmiany danych logowania (UserName, Password,Picture, e-mail.)
+  - [x] Wykresy dotyczące czestotliwości wynajmów poszczególnych samochodów.
 
-- [] Wykresy dotyczące czestotliwości wynajmów poszczególnych samochodów.
-  - [] Opcjonalnie:
+- [] Opcjonalnie:
   - [] Aktualnosci
   - [] Kariera
   - [] Regulamin itp.

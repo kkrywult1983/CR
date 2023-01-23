@@ -1,6 +1,6 @@
 import Helper from '@ember/Component/helper';
 
-export default class currency extends Helper {
+export default class Currency extends Helper {
   compute(params, hash = {}) {
     const [number] = params;
     const { sign = 'zł' } = hash;

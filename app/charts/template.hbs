@@ -1,0 +1,32 @@
+{{page-title 'Rents sensitivity'}}
+
+<div class='container'>
+  <div class='p-5 m-10 border border-solid'>
+    <EmberChart
+      @type='bar'
+      @data={{this.chartData}}
+      @options={{this.chartOptions}}
+    />
+  </div>
+
+</div>
+<div class='container'>
+  <div class='p-5 m-10 border border-solid'>
+    <EmberChart
+      @type='polarArea'
+      @data={{this.chartData}}
+      @options={{this.chartOptions}}
+    />
+  </div>
+
+</div>
+<div class='container'>
+  <div class='p-5 m-10 border border-solid'>
+    <EmberChart
+      @type='doughnut'
+      @data={{this.chartData}}
+      @options={{this.chartOptions}}
+    />
+  </div>
+
+</div>

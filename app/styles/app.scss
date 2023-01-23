@@ -2,13 +2,13 @@
 @import 'ember-power-select';
 
 body {
-  background-color: rgb(144, 139, 148);
+  background-color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .nav-link {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 12px;
   color: black;
 }
 
@@ -17,4 +17,8 @@ body {
 }
 .ember-tooltip {
   padding: 10;
+}
+
+.navbar-helloUser {
+  margin-right: 50px;
 }
